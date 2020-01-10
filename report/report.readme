@@ -1,0 +1,6 @@
+Report is written on Overleaf, which also has a git repo-structure.
+
+In order to avoid issues with nested repos/submodules the full overleaf project is copied onto here.
+
+Main .tex file is found in 
+/overleaf-LaTeX-repo/main.tex

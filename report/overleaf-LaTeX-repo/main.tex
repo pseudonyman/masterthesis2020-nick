@@ -1,0 +1,125 @@
+% Mallen hämtad från http://www.nada.kth.se/~serafim/xjobb/
+% Finns även för svensk rapport
+
+% useful stuff om Ex-jobb på KTH: https://www.kth.se/social/group/examensarbete-vid-cs/page/rapporten-5/
+
+% Exempelrapporter, Kex: https://www.kth.se/social/course/DD143X/page/exempel-pa-rapport/
+
+% HOW_TO_LATEX @michel:
+%-------------------------------------------
+% Nytt stycke: 2ggr Enter
+% Ny rad: \\
+% Kursiv text: \textit{*texten*}
+% Fet text: \textbf{*texten*}
+% Citationstecken görs med 2 st enkla, like so: ''text''
+% Lägg in citering: \cite{*namn på referensen*}. Referensen måste läggas in i dokumentet example.bib under Meny->Project
+% Punktlista: \begin{itemize} + "\item" för varje punkt + \end{itemize}
+% Infoga figurer:
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=14cm]{Overview.jpg}
+%\caption{Overview of system interface\label{fig:overview}}
+%\end{figure}
+% referera till figur: \ref{*label*}
+% För att kommentera ut block av text utan att radera använd "\begin{comment} + Texten + \end{comment}. Små kommentarer kan du använda "%", som du ser.
+% För att lägga in synliga todo-kommentarer och flaggor använd "\todo[inline]{@Nick, vad ska det här betyda?}", eller vad du nu vill säga. [inline] är valfritt, utan det så hamnar det i marginalen i stället.
+%
+
+\documentclass[a4paper,11pt]{kth-mag}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{pgfgantt}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\setlist{nosep}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[linecolor=blue,backgroundcolor=blue!25]{todonotes}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish,english]{babel}
+\usepackage{modifications}
+\let\cleartorecto\newpage
+\let\cleardoublepage\clearpage
+\renewcommand{\chapnamefont}    {\usefont{T1}{lmss}{sbc}{n}\boldmath\huge}
+
+\title{ThesisTITLE}
+%\subtitle{-  -}
+\foreigntitle{TITEL på Svenska :=)}
+\author{Nick Nyman}
+\date{May, 2020}
+\blurb{Master's thesis in Industrial Management\\ Engineering degree project in Computer Science, ME200X\\KTH, Royal Institute of Technology\\Supervisors: Tomas Sörensson, KTH, Hannes Sahlin, Nordea\\Examiner: ??????}
+\trita{TRITA xxx yyyy-nn}
+
+
+\begin{document}
+\addto\captionsenglish{\renewcommand{\chaptername}{}}
+\renewcommand*{\chapternamenum}{}
+\renewcommand*{\afterchapternum}{ }
+
+\frontmatter
+\pagestyle{empty}
+\removepagenumbers
+\maketitle
+\todo[inline]{Kolla upp formatet på förstasidan samt bilden. Anpassa till indek ist för data. Infoga obligatoriskt försättsblad i pdf?}
+\selectlanguage{english}
+\begin{vplace}[0.5]
+\begin{abstract}
+
+\end{abstract}
+\end{vplace}
+\clearpage
+\begin{vplace}[0.5]
+\begin{foreignabstract}{swedish}
+
+\end{foreignabstract}
+\end{vplace}
+\clearpage
+\tableofcontents*
+\mainmatter
+\pagestyle{newchap}
+
+\chapter{Introduction}
+
+
+
+\section{Problem statement}
+
+
+
+\section{Scope}
+
+\section{Purpose}
+
+
+\chapter{Background}
+
+
+
+\chapter{Method}
+
+
+\chapter{Results}
+
+
+\chapter{Discussion}
+This chapter contains the authors' discussion of both the results of the experiments and the methods used by which they were carried out.
+\section{Discussion of results}
+
+
+\section{Discussion of methods}
+
+
+\chapter{Conclusion}
+
+
+\bibliographystyle{unsrt}
+\bibliography{resources.bib}
+\newpage
+
+\appendix
+\addappheadtotoc
+
+\end{document}
